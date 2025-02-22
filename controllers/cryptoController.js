@@ -7,7 +7,7 @@ const getCoinsList = async (req, res) => {
     } catch (error) {
         console.log(error.message);
         console.log(req.url);
-
+        
         res.status(500).json({ error: "Error fetching coins list",msg:error.message });
 
     }
