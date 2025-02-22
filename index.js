@@ -8,7 +8,7 @@ require("dotenv").config();
 app.use(express.json());
 const allowedOrigins = [
     "http://localhost:3000", 
-    "https://your-frontend-domain.com", 
+    "https://crypto-tracker-mu-umber.vercel.app", 
   ];
   
   app.use(cors({
