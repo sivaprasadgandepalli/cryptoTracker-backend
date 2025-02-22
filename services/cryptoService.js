@@ -4,8 +4,6 @@ const BASE_URL = process.env.BASE_URL;
 const API_KEY = process.env.COINGECKO_API_KEY;
 
 const fetchCoinsList = async (currency = "usd") => {
-    console.log("BASE_URL:", process.env.BASE_URL);
-    console.log("COINGECKO_API_KEY:", process.env.COINGECKO_API_KEY);
     const response = await axios.get(`${BASE_URL}/markets`, {
         params: { vs_currency: currency, order: "market_cap_desc", per_page: 100, page: 1, sparkline: false },
         headers: { 'x-cg-api-key': API_KEY }

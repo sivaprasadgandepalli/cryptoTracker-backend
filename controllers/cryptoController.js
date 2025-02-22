@@ -5,10 +5,9 @@ const getCoinsList = async (req, res) => {
         const data = await cryptoService.fetchCoinsList(req.params.currency);
         res.json(data);
     } catch (error) {
-        console.log(error.message);
         console.log(req.url);
-        
-        res.status(500).json({ error: "Error fetching coins list",msg:error.message });
+
+        res.status(500).json({ error: "Error fetching coins list",msg:error });
 
     }
 };
