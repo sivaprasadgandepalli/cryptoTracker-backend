@@ -8,7 +8,6 @@ const fetchCoinsList = async (currency = "usd") => {
         params: { vs_currency: currency, order: "market_cap_desc", per_page: 100, page: 1, sparkline: false },
         headers: { 'x-cg-api-key': API_KEY }
     });
-    
     return response.data;
 };
 
